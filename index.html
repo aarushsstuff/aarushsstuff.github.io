@@ -1,79 +1,79 @@
-
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aarush's Stuff</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
-      
-      :root {
-        --purple-main: 139, 92, 246;
-      }
-
-      body {
-        font-family: 'Plus Jakarta Sans', sans-serif;
-        background-color: #06040d;
-        color: #f3f4f6;
-        overflow-x: hidden;
-      }
-
-      /* Fixed Navbar scroll offset */
-      section {
-        scroll-margin-top: 120px;
-      }
-
-      .glass {
-        background: rgba(15, 10, 29, 0.7);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border: 1px solid rgba(139, 92, 246, 0.15);
-      }
-
-      .text-gradient {
-        background: linear-gradient(135deg, #ffffff 0%, #a78bfa 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-
-      @keyframes float {
-        0%, 100% { transform: translateY(0) rotate(0); }
-        50% { transform: translateY(-15px) rotate(2deg); }
-      }
-      .animate-float {
-        animation: float 8s ease-in-out infinite;
-      }
-
-      ::-webkit-scrollbar {
-        width: 6px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #06040d;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #2e1065;
-        border-radius: 10px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #4c1d95;
-      }
-    </style>
-    <script type="importmap">
-    {
-      "imports": {
-        "react/": "https://esm.sh/react@^19.2.3/",
-        "react": "https://esm.sh/react@^19.2.3",
-        "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
-      }
-    }
-    </script>
-  <link rel="stylesheet" href="/index.css">
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Aarush's Stuff</title>
+<link rel="stylesheet" href="css/style.css"/>
 </head>
-  <body>
-    <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
+<body>
+<canvas id="particles"></canvas>
+
+<nav class="navbar">
+  <div class="nav-brand">Aarush's Stuff</div>
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#preview">Preview</a>
+    <a href="#games">Downloads</a>
+  </div>
+</nav>
+
+<section id="home" class="hero">
+  <img src="assets/me.png" class="avatar"/>
+  <h1 class="hero-title">Aarush's Stuff</h1>
+  <p class="hero-subtitle">Highly stylized indie games & experiments</p>
+</section>
+
+<div class="separator"></div>
+
+<section id="about" class="section">
+  <div class="about-container glass">
+    <div class="about-content">
+      <h2>About Me</h2>
+      <p>I'm <strong>Aarush</strong>, a 13 year old game developer. I use C# & Python with Unity & Godot to make my games.</p>
+      <div class="about-stats">
+        <div class="stat-item"><span>5+</span><p>Projects</p></div>
+        <div class="stat-item"><span>4+</span><p>Years Coding</p></div>
+        <div class="stat-item"><span>50+</span><p>Assets built</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="separator"></div>
+
+<section id="preview" class="section">
+  <h2>Game Previews</h2>
+  <div class="preview-grid">
+    <img src="assets/preview1.png"/>
+    <img src="assets/preview2.png"/>
+    <img src="assets/preview3.png"/>
+  </div>
+</section>
+
+<div class="separator"></div>
+
+<section id="games" class="section">
+  <h2>Downloads</h2>
+  <div class="card-grid">
+    
+    <div class="game-card">
+      <img src="assets/game1.png" class="card-icon"/>
+      <h3>Leafing around</h3>
+      <p>A 2D Endless runner where you're a leaf who's avoiding bombs</p>
+      <div class="tags"><span><b>Endless Runner</b></span><span><b>Windows</b></span></div>
+      
+      <a class="btn" href="https://github.com/aarushkaushik01/aarushsstuff/releases/download/Game/Leafing.around.Setup.exe" download>Download</a>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2025 Aarush</p>
+</footer>
+
+<script src="js/particles.js"></script>
 </body>
 </html>
